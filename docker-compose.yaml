@@ -18,6 +18,7 @@ services:
       - db
   web:
     build: ./web
+    command: python3 manage.py runserver 0.0.0.0:8000
     volumes:
       - ./web/code:/code
     ports:
