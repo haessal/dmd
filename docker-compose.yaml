@@ -16,3 +16,11 @@ services:
       - "db:db"
     depends_on:
       - db
+  web:
+    build: ./web
+    volumes:
+      - ./web/code:/code
+    ports:
+      - "8989:8000"
+    depends_on:
+      - db
